@@ -1,11 +1,11 @@
 function produceDrivingRange(blockRange) {
 	return function (starting, ending) {
 		let distance = Math.abs(parseInt(starting) - parseInt(ending))
-		let overUnder = Math.abs(distance - blockRange);
+		let difference = Math.abs(distance - blockRange);
 		if (distance <= blockRange) {
-			return `within range by ${overUnder}`;
+			return `within range by ${difference}`;
 		} else {
-			return `${overUnder} blocks out of range`;
+			return `${difference} blocks out of range`;
 		}
 	}
 }
